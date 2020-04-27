@@ -10,7 +10,7 @@ This theme is lighwight and responsive, including tables, images, videos and ifr
 
 Include support for jekyll-seo-tag, Google Analytics, and include links on any post for share on various social networks, WhatsApp and Telegram.
 
-![GitHub All Releases](https://img.shields.io/github/downloads/son-link/jekyll-minimal-titorial/total?style=flat-square&label=Github%20downloads)
+![GitHub All Releases](https://img.shields.io/github/downloads/son-link/jekyll-minimal-tutorial/total?style=flat-square&label=Github%20downloads)
 ![Gem](https://img.shields.io/gem/dt/jekyll-minimal-tutorial?label=GEM%20downloads&style=flat-square)
 
 ![Capture](/screenshot.png)

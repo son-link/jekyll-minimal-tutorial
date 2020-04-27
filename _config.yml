@@ -8,10 +8,9 @@ url: "https://son-link.github.io/jekyll-minimal-tutorial/" # the base hostname &
 social_links: true # If true show social links
 rss: true
 twitter: 'https://twitter.com/sonlink'
-github: 'https://github.com/son-link'
+github: 'https://github.com/son-link/jekyll-minimal-tutorial'
 gitlab: 'https://gitlab.com/son-link'
 spotify: 'https://open.spotify.com/user/117752446'
-steam: ''
 
 plugins:
 - jekyll-paginate
