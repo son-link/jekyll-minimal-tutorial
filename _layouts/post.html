@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="entry">
+	<div class="entry-header">
+		<h4 class="entry-title">{{ page.title }}</h4>
+		<time class="entry-date">{{ page.date | date: "%d/%m/%Y" }}</time>
+	</div>
+	<div class="entry-content" id="post-content">
+		{{ content }}
+	</div>
+	<div id="share">
+		<span>Share:</span>
+		<a class="icon-twitter" title="Share on Twitter" target="_black" href="http://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}"></a>
+		<a class="icon-facebook" title="Share on Facebook" target="_black" href="http://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}"></a>
+		<a class="icon-whatsapp" title="Share on WhatsApp" target="_black" href="whatsapp://send?text={{ page.url |absolute_url | cgi_escape}}"></a>
+		<a class="icon-telegram" title="Share on Telegram" target="_black" href="https://t.me/share/url?url={{ page.url | absolute_url | cgi_escape}}"></a>
+	</div>
+</article>

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div id="entries">
+	{% for post in paginator.posts %}
+		<div class="entry">
+			<div class="entry-header">
+				<h4 class="entry-title"><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" >{{ post.title }}</a></h4>
+				<time class="entry-date">{{ post.date | date: "%d/%m/%Y" }}</time>
+			</div>
+			<div class="entry-content">
+				{{ post.description }}
+			</div>
+		</div>
+	{% endfor %}
+</div>
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+	<nav id="pagination">
+	{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}"><i class="icon-prev"></i></a>
+	{% else %}
+		<span class="icon-prev inactive"></span>
+	{% endif %}
+
+	{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		<span class="actual-page inactive">{{ page }}</span>
+		{% elsif page == 1 %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}">{{ page }}</a>
+		{% else %}
+		<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page | prepend: site.url }}">{{ page }}</a>
+		{% endif %}
+	{% endfor %}
+
+	{% if paginator.next_page %}
+		<a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}"><i class="icon-next"></i></a>
+	{% else %}
+		<span class="icon-next inactive"></span>
+	{% endif %}
+</nav>
+{% endif %}

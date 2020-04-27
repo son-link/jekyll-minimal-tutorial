@@ -1,0 +1,27 @@
+			</div><!-- End div#content -->
+		</div><!-- End div#container -->
+		<footer>
+			<div id="credits">
+				{{ site.credits }}
+			</div>
+			<div id="social_links">
+				{%- include social_links.html -%}
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript" src="{{ '/assets/js/simple-jekyll-search.min.js' | absolute_url }}"></script>
+	<script type="text/javascript" src="{{ '/assets/js/app.js' | absolute_url }}"></script>
+	<script type="text/javascript">
+		var sjs = SimpleJekyllSearch({
+			searchInput: document.getElementById('search-input'),
+			resultsContainer: document.getElementById('search-results'),
+			json: '{{ '/search.json' | absolute_url }}',
+			limit: 10,
+			searchResultTemplate: '<div class="search-entry">\
+				<h4><a href="{url}" >{title}</a></h4>\
+				<span>{description}</span>\
+			</div>',
+			noResultsText: '<span id="no-results">No results found</span>'
+		});
+	</script>
+</html>

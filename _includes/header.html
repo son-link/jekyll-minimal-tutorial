@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/fontello-embedded.css' | absolute_url }}" />
+		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/syntax.css' | absolute_url }}" />
+		<link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | absolute_url }}" />
+		<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
+		<!-- Check if jekyll-seo-tag plugin is activated -->
+		{% if site.plugins contains 'jekyll-seo-tag' %}
+			{% seo %}
+		{% endif %}
+		<!-- If user add her Google Analytics code include the file for use -->
+		{% if site.google-analytics %}
+			{% include google-analytics.html %}
+		{% endif %}
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<div class="navbar">
+					<nav>
+						<a id="toggle_nav" class="icon-menu"></a>
+						<span class="navbar-title"><a href="{{ site.url }}">{{ site.title }}</a></span>
+						<div id="main-nav">
+							{% for p in site.pages %}
+								{% if p.title and p.onmenu != false %}
+									<a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
+								{% endif %}
+							{% endfor %}
+						</div>
+						<button id="search-btn" class="icon-search"></button>
+					</nav>
+				</div>
+			</header>
+			<div id="search-div">
+				<div id="search-content">
+					<a class="icon-close" id="close-search"></a>
+					<div id="search" class="header-section">
+						<input type="search" id="search-input" placeholder="Search..."/>
+					</div>
+					<div id="search-results"></div>
+				</div>
+			</div>
+			<div id="content">
+				
+			

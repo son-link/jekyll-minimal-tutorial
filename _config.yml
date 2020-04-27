@@ -1,0 +1,37 @@
+title: Jekyll Minimal Tutorial
+email: sonlink.dourden@gmail.com
+description: A simple and clear theme for Jekyll, ideal if you write tutorials.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://demo-jekyll.runkodapps.com/" # the base hostname & protocol for your site
+
+# Social Network
+social_links: true # If true show social links
+rss: true
+twitter: 'https://twitter.com/sonlink'
+github: 'https://github.com/son-link'
+gitlab: 'https://gitlab.com/son-link'
+spotify: 'https://open.spotify.com/user/117752446'
+steam: ''
+
+plugins:
+- jekyll-paginate
+- jekyll-seo-tag
+
+# Pagination
+paginate: 3
+paginate_path: "/page:num/"
+
+include: ['_pages']
+
+exclude:
+  - vendor
+  - '*.gem*'
+  - icons.js
+  - config_fontello.json
+  - assets/css/config.json
+  - assets/icons
+
+credits: |
+  jekyll-minimal-tutorial <i class="icon-copy"></i> 2020 Alfonso Saavedra "Son Link"<br />
+  Under the GNU/GPL 3 license. Powered by <a href="https://jekyllrb.com/" target="_black">Jekyll</a>.<br />
+  Make with <i class="icon-heart"></i> and <i class="icon-language-html5" title="html5"></i>, <i class="icon-language-css3" title="css3"></i> and <i class="icon-language-javascript" title="javascript"></i>
