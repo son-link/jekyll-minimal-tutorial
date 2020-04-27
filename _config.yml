@@ -2,7 +2,7 @@ title: Jekyll Minimal Tutorial
 email: sonlink.dourden@gmail.com
 description: A simple and clear theme for Jekyll, ideal if you write tutorials.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://demo-jekyll.runkodapps.com/" # the base hostname & protocol for your site
+url: "https://son-link.github.io/jekyll-minimal-tutorial/" # the base hostname & protocol for your site
 
 # Social Network
 social_links: true # If true show social links
